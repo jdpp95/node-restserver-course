@@ -13,7 +13,7 @@ router.get('/', userGetResponse);
 
 router.post('/', userPostResponse);
 
-router.put('/', userPutResponse);
+router.put('/:id', userPutResponse);
 
 router.patch('/', userPatchResponse);
 

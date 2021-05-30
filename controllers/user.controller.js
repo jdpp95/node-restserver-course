@@ -1,8 +1,16 @@
 const { response } = require('express')
 
 const userGetResponse = (req, res = response) => {
+
+    const {q, name='No name', apikey, page = 1, limit } = req.query;
+
     res.json({
-        msg: 'get API - controller'
+        msg: 'get API - controller',
+        q,
+        name,
+        apikey,
+        page,
+        limit
     })
 }
 
@@ -18,8 +26,12 @@ const userPostResponse = (req, res = response) => {
 }
 
 const userPutResponse = (req, res = response) => {
+
+    const { id } = req.params;
+
     res.status(400).json({
-        msg: 'put API - controller'
+        msg: 'put API - controller',
+        id
     })
 }
 
