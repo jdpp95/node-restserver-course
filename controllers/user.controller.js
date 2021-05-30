@@ -7,8 +7,13 @@ const userGetResponse = (req, res = response) => {
 }
 
 const userPostResponse = (req, res = response) => {
+
+    const { name, age } = req.body;
+
     res.status(201).json({
-        msg: 'post API - controller'
+        msg: 'post API - controller',
+        name,
+        age
     })
 }
 
